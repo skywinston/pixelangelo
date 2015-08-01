@@ -5,8 +5,7 @@ window.onload = function(){
 }
 
 // Define Functions & Global Variables
-var activeColor = "#303f9f";
-var inactiveColor="#FAFAFA";
+
 
 // 
 
