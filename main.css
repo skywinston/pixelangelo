@@ -1,0 +1,42 @@
+body {
+  background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 450px;
+  margin: auto;
+}
+
+.pixel {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #eeeeee;
+  background-color: #fafafa;
+  margin: 0;
+}
+
+/****************************************
+** COLORS ******************************
+***************************************/
+
+.blue500 {
+  background-color: #2196F3;
+  border: 1px solid #2196F3;
+}
+
+.red500 {
+  background-color: #F44336;
+  border: 1px solid #F44336;
+}
+
+
