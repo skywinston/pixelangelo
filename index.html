@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900|Montserrat:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/material-colors/dist/colors.css">
   <link rel="stylesheet" type="text/css" href="main.css">
   <script type="text/javascript" src="app.js"></script>
   <title>Pixelangelo</title>
@@ -9,306 +11,412 @@
 <body>
 
 <div class="wrapper">
+  <h1 class="app_title">Pixelangelo</h1>
   <div class="workspace">
 
     <div id="tool_palette">
       <div id="tool_picker">
-        <div id="pixel_brush"></div>
-        <div id="paint_tool"></div>
-        <div id="color_picker"></div>
+        <div id="pixel_brush" class="bg-grey-800 material-1">
+          <svg fill="#FFFFFF" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l8.96-8.96c.39-.39.39-1.02 0-1.41z"/>
+          </svg>
+        </div>
+        <div id="paint_tool" class="bg-grey-800 material-1">
+          <svg fill="#FFFFFF" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M16.56 8.94L7.62 0 6.21 1.41l2.38 2.38-5.15 5.15c-.59.59-.59 1.54 0 2.12l5.5 5.5c.29.29.68.44 1.06.44s.77-.15 1.06-.44l5.5-5.5c.59-.58.59-1.53 0-2.12zM5.21 10L10 5.21 14.79 10H5.21zM19 11.5s-2 2.17-2 3.5c0 1.1.9 2 2 2s2-.9 2-2c0-1.33-2-3.5-2-3.5z"/>
+            <path d="M0 20h24v4H0z" fill-opacity=".36"/>
+          </svg>
+        </div>
+        <div id="color_picker" class="bg-grey-800 material-1">
+          <svg fill="#FFFFFF" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
       </div>
-      <div id="color_palette_custom"></div>
-      <div id="color_palette_default"></div>
+      <div id="color_palette_secondary" class="material-1">
+        <div class="pixel bg-brown-500 border-brown-500"></div>
+        <div class="pixel bg-grey-500 border-grey-500"></div>
+        <div class="pixel bg-blue-grey-500 border-blue-grey-500"></div>
+        <div class="pixel bg-white border-white"></div>
+        <div class="pixel bg-black border-black"></div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="pixel add_color">
+          <svg fill="#9E9E9E" height="18" viewBox="0 0 24 24" width="18"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div id="color_palette_primary" class="material-1">
+        <div class="pixel bg-red-500" data-color="bg-red-500"></div>
+        <div class="pixel bg-pink-500" data-color="bg-pink-500"></div>
+        <div class="pixel bg-purple-500" data-color="bg-purple-500"></div>
+        <div class="pixel bg-deep-purple-500" data-color="bg-deep-purple-500"></div>
+        <div class="pixel bg-indigo-500" data-color="bg-indigo-500"></div>
+        <div class="pixel bg-blue-500" data-color="bg-blue-500"></div>
+        <div class="pixel bg-light-blue-500" data-color="bg-light-blue-500"></div>
+        <div class="pixel bg-cyan-500" data-color="bg-cyan-500"></div>
+        <div class="pixel bg-teal-500" data-color="bg-teal-500"></div>
+        <div class="pixel bg-green-500" data-color="bg-green-500"></div>
+        <div class="pixel bg-light-green-500" data-color="bg-light-green-500"></div>
+        <div class="pixel bg-lime-500" data-color="bg-lime-500"></div>
+        <div class="pixel bg-yellow-500" data-color="bg-yellow-500"></div>
+        <div class="pixel bg-amber-500" data-color="bg-amber-500"></div>
+        <div class="pixel bg-orange-500" data-color="bg-orange-500"></div>
+        <div class="pixel bg-deep-orange-500" data-color="bg-deep-orange-500"></div>
+      </div>
     </div>
-    <div id="canvas" class="canvas">
+    <div id="canvas" class="canvas material-1">
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
       </div>
       <div class="row_of_pixels">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </div>  
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+        <div class="pixel bg-default" data-color="bg-default"></div>
+      </div>
     </div>
     <div id="version_control">
       <div id="undo"></div>

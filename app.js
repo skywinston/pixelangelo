@@ -1,31 +1,48 @@
 // On DOM ready, add click Event Listeners to the canvas 
 window.onload = function(){
   var canvas = document.getElementById("canvas");
+  var primaryPalette = document.getElementById("color_palette_primary");
   canvas.addEventListener("click", paintPixel);
+  // canvas.addEventListener("mousedown", mouseMoving);
+  // canvas.addEventListener("mouseover", dragPaintPixels);
+  primaryPalette.addEventListener("click", chooseColor);
+
 }
 
-// Define Functions & Global Variables
 
 
-// 
+// Create global color object
+var colorPalette = {
+  currentColor: "bg-red-500",
+  mouseIsDown: false
+};
 
-// $(document).ready( function(){
-//   var canvas = $( ".pixel" ).on("click", paintPixel);
-// });  //in jQuery
+// Choose a color from the default color palette
+var chooseColor = function(){
+  var newColor = event.target.getAttribute("data-color");
+  colorPalette.currentColor = newColor;
+  // Need to use .hasAttribute to set the currentColor in colorPalette
+};
 
-// Chris & Geoff inspired 
+var pixelBrush = function(){
 
-// function paintPixel(event){
-//   // $(event.currentTarget).css("background-color", activeColor); // in jQuery
-//   event.target.style.backgroundColor = activeColor; //with JavaScript
+};
 
-//   if ( !event.target.hasAttribute("string-color") || event.target.getAttribute( "string-color" ) !== activeColor ){
-//     event.target.style.backgroundColor = activeColor;
-//     event.target.setAttribute("string-color", activeColor);
-//   } else {
-//     event.target.style.backgroundColor = inactiveColor;
-//     event.target.setAttribute("string-color", inactiveColor);
-//   }
-//   event.target.style.backgroundColor = event.target.style.backgroundColor !== activeColor ? activeColor : "#FAFAFA";
-    
-// }
+// Queries the global color object for the current color, and applies it
+// to the element that was clicked.  If already set to currentColor, it 
+// will toggle the pixel to the unpainted (default) state.
+var paintPixel = function(){
+  var colorToApply = colorPalette.currentColor;
+  var currentColor = event.target.getAttribute("data-color");
+  if (colorToApply !== currentColor){
+    event.target.setAttribute("data-color", colorToApply);
+    event.target.classList.remove(currentColor);
+    event.target.classList.add(colorToApply);
+  } else if (colorToApply == currentColor){
+    event.target.setAttribute("data-color", "bg-default");
+    event.target.classList.remove(currentColor);
+    event.target.classList.add("bg-default");
+  }
+};
+
+
