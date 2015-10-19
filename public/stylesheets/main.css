@@ -34,6 +34,9 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -42,6 +45,10 @@ body {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
 }
 
@@ -81,6 +88,7 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  width: 120px;
   margin-right: 16px;
 }
 
@@ -180,7 +188,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   max-width: 450px;
-  margin: auto;
+  /*margin: auto;  Safari has issues with this */
   cursor: default;
   /* Eliminates Highlighting on Drag */
   -webkit-touch-callout: none;
